@@ -1,0 +1,35 @@
+package naveen;
+
+class s1 {
+	int x = 10;
+	String n ="naveen";
+
+
+}
+
+class s5 extends s1 {
+	
+	void show(){
+    
+		int y = 20;
+		String s ="yogendra";
+	
+		System.out.println(super.x + " "+n);
+		System.out.println(y+super.x+" "+s);
+
+
+	}
+
+	}
+
+
+
+public class super123 {
+
+	public static void main(String[] args) {
+		s5 ob = new s5();
+		ob.show();
+
+	}
+
+}
