@@ -1,0 +1,54 @@
+package naveen;
+import java.util.Map;
+import java.util.*;
+public class EmployeeMap {
+	 int id;
+	 String name;
+	 double salary;
+	 public   EmployeeMap (int id ,String name,double salary) {
+		 this.id=id;
+		 this.name=name;
+		 this.salary=salary;
+	 }
+		 public int  getId() {
+			 return id;
+			 
+		 }
+		 public void setId() {
+			 this.id=id;
+	 }
+		 public String getName() {
+			 return name;
+			 
+		 }
+	public void setName() {
+		this.name=name;
+		
+	}
+	public double getSalary() {
+		return salary;
+		}
+	public void  setSalary() {
+		this.salary=salary;
+		
+	}
+		public static void main (String []args) {
+			Scanner sc=new Scanner(System.in);
+			EmployeeMap ob1= new EmployeeMap(1,"naveen",10000.0);
+			EmployeeMap ob2=new EmployeeMap(3,"eswar",20000.0);
+			EmployeeMap ob3=new EmployeeMap(2,"yogi",30000.0);
+			
+			Map<Integer,EmployeeMap> a =new HashMap<Integer,EmployeeMap>();
+			
+			a.put(ob1.getId(),ob1);
+			a.put(ob2.getId(),ob2);
+			a.put(ob3.getId(),ob3);
+			
+			Set<Integer> s =a.keySet();
+			for(int i:s) {
+				System.out.println("ID:"+ i + "name:"+a.get(i).getName()+",salary:"+a.get(i).getSalary());
+				{
+				}
+			}
+		}
+}
