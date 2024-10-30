@@ -1,0 +1,30 @@
+public class bank {
+	static int currentbalance=1000;
+
+public static void greetcustomer() {
+	System.out.println("hello,welcome to banking system");
+}
+public void deposit(int amount) {
+	currentbalance=currentbalance+amount;	
+	System.out.println("amount is deposit successfully");
+}
+public static void withdraw(int amount) {
+	currentbalance=currentbalance-amount;
+	System.out.println("amount is withdraw successfully");
+}
+public static int getcurrentbalance(){
+	return currentbalance;
+	
+}
+public static void main (String []args) {
+	bank b=new bank();
+	greetcustomer();
+	System.out.println("current balance is:"+bank.getcurrentbalance());
+	b.deposit(1000);
+	System.out.println("current balance is:"+bank.getcurrentbalance());
+	withdraw(300);
+	System.out.println("current balance is:"+bank.getcurrentbalance());
+	
+	
+}
+}
